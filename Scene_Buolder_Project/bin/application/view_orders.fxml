@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.ViewOrdersController">
+
+    <children>
+        <Label text="View Orders" style="-fx-font-size: 24; -fx-font-weight: bold;" AnchorPane.leftAnchor="20" AnchorPane.topAnchor="20"/>
+        
+        <TableView fx:id="ordersTable" AnchorPane.topAnchor="60" AnchorPane.bottomAnchor="80" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <columns>
+                <TableColumn fx:id="orderIdColumn" text="Order ID" prefWidth="100"/>
+                <TableColumn fx:id="customerNameColumn" text="Customer Name" prefWidth="200"/>
+                <TableColumn fx:id="orderDateColumn" text="Order Date" prefWidth="150"/>
+                <TableColumn fx:id="totalAmountColumn" text="Total Amount" prefWidth="100"/>
+            </columns>
+        </TableView>
+        
+        <Button text="Edit Order" fx:id="editOrderButton" AnchorPane.leftAnchor="20" AnchorPane.bottomAnchor="20" onAction="#handleEditOrder"/>
+        <Button text="Delete Order" fx:id="deleteOrderButton" AnchorPane.leftAnchor="120" AnchorPane.bottomAnchor="20" onAction="#handleDeleteOrder"/>
+        <Button text="Back" fx:id="backButton" AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20" onAction="#handleBack"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.DashboardController"
+            prefWidth="768" prefHeight="600" style="-fx-background-color: #f5f5f5;">
+    <top>
+        <Label fx:id="welcomeLabel" text="Welcome, [User Name]" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #4b9cd3;" BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-background-color: #ffffff; -fx-border-color: #4b9cd3; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <Label text="Top 5 Popular Books" style="-fx-font-size: 16px; -fx-text-fill: #4b9cd3;" />
+            <TableView fx:id="topBooksTable" style="-fx-background-color: #e6f7ff; -fx-border-color: #4b9cd3;">
+                <columns>
+                    <TableColumn fx:id="titleColumn" text="Title" />
+                    <TableColumn fx:id="authorColumn" text="Author" />
+                    <TableColumn fx:id="copiesColumn" text="# Physical Copies" />
+                    <TableColumn fx:id="priceColumn" text="Price (AUD)" />
+                    <TableColumn fx:id="soldCopiesColumn" text="# Sold Copies" />
+                </columns>
+            </TableView>
+            <Button text="Add to Cart" style="-fx-background-color: #4b9cd3; -fx-text-fill: white;" onAction="#handleAddToCart"/>
+            <Button text="Checkout" style="-fx-background-color: #4caf50; -fx-text-fill: white;" onAction="#handleCheckout"/>
+            <Button text="View All Orders" style="-fx-background-color: #4b9cd3; -fx-text-fill: white;" onAction="#handleViewOrders"/>
+            <Button text="Export Orders" style="-fx-background-color: #4b9cd3; -fx-text-fill: white;" onAction="#handleExportOrders"/>
+            <Button text="Edit Profile" fx:id="editProfileButton" style="-fx-background-color: #4b9cd3; -fx-text-fill: white;" onAction="#handleEditProfileButtonAction"/>
+            <Button text="Logout" fx:id="logoutButton" style="-fx-background-color: #d9534f; -fx-text-fill: white;" onAction="#handleLogoutButtonAction"/>
+        </VBox>
+    </center>
+</BorderPane>

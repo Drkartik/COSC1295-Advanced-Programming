@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" prefWidth="1024" prefHeight="768" spacing="15" alignment="CENTER" style="-fx-background-color: #f5f5f5;">
+    <Label text="Order History" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #4b9cd3;" />
+    <TableView fx:id="orderHistoryTable" style="-fx-background-color: #ffffff; -fx-border-color: #4b9cd3;">
+        <columns>
+            <TableColumn text="Order Number" />
+            <TableColumn text="Date" />
+            <TableColumn text="Total Price" />
+        </columns>
+    </TableView>
+    <Button text="Export Selected Orders" fx:id="exportOrdersButton" style="-fx-background-color: #4682b4; -fx-text-fill: white;" />
+</VBox>

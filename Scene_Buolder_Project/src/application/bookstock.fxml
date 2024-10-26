@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" prefWidth="1024" prefHeight="768" spacing="15" alignment="CENTER" style="-fx-background-color: #ffffff;">
+    <Label text="Manage Book Stock" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #5a9bd4;" />
+    <TableView fx:id="bookStockTable" style="-fx-background-color: #f0f8ff; -fx-border-color: #4b9cd3;">
+        <columns>
+            <TableColumn text="Book Title" />
+            <TableColumn text="Authors" />
+            <TableColumn text="Price" />
+            <TableColumn text="Sold Copies" />
+            <TableColumn text="Remaining Stock" />
+        </columns>
+    </TableView>
+    <Button text="Update Selected Book Stock" fx:id="updateStockButton" style="-fx-background-color: #4682b4; -fx-text-fill: white;" />
+</VBox>

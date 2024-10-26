@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="application.EditOrderController">
+    <children>
+        <Label text="Edit Order" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        
+        <Label text="Total Price:" layoutY="40"/>
+        <TextField fx:id="totalPriceField" promptText="Total Price" layoutY="60" />
+
+        <Label text="Order Date:" layoutY="100"/>
+        <TextField fx:id="orderDateField" promptText="Order Date" layoutY="120" />
+
+        <Button text="Save" fx:id="saveButton" layoutY="160" onAction="#handleSave"/>
+    </children>
+</AnchorPane>
